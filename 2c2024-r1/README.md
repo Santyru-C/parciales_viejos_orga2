@@ -4,18 +4,7 @@
 ## Normas generales y modalidad de entrega
 
 - El parcial es **INDIVIDUAL**
-- Una vez terminada la evaluación se deberá crear un issue con el *hash* del
-  *commit* de entrega.
-
-## Régimen de Aprobación
-
-- Para aprobar el examen es necesario obtener como mínimo **un ejercicio aprobado y un ejercicio regular**, demostrando conocimiento suficiente de todos los temas abarcados por el parcial.
-
-## Actualización del fork individual
-
-Es importante que, para esta instancia de parcial y próximas, **no creen un nuevo fork de este repositorio** si no que actualicen el mismo fork individual que estaban utilizando para el tp0.
-
-Los pasos para actualizar el repositorio son los mismos que siguieron para el TP1-b y TP1-c, pero ante cualquier duda pueden consultarlos en el archivo [como_actualizar.md (link)](https://git.exactas.uba.ar/ayoc-doc/individual-2c2024/-/blob/master/p1/como_actualizar.md) de esta carpeta.
+- Una vez terminada la evaluación se deberá crear un PR a `main` con la branch con la resolución como source.
 
 ## Compilación y Testeo
 
@@ -26,16 +15,19 @@ Para compilar y ejecutar los tests cada ejercicio dispone de un archivo
 | ------------------- | ------------------------------------------------------------------- |
 | `make test_c`       | Genera el ejecutable usando la implementación en C del ejercicio.   |
 | `make test_asm`     | Genera el ejecutable usando la implementación en ASM del ejercicio. |
+| `make test_abi`     | Genera usando la implementación en ASM del ejercicio + archivos necesarios para ABI enforcer |
 | `make run_c`        | Corre los tests usando la implementación en C.                      |
 | `make run_asm`      | Corre los tests usando la implementación en ASM.                    |
+| `make run_abi`      | Corre los tests usando la implementación en ASM + ABI enforcer.     |
 | `make valgrind_c`   | Corre los tests en valgrind usando la implementación en C.          |
 | `make valgrind_asm` | Corre los tests en valgrind usando la implementación en ASM.        |
+| `make valgrind_abi` | Corre los tests en valgrind usando la implementación en ASM + ABI enforcer        |
 | `make clean`        | Borra todo archivo generado por el `Makefile`.                      |
 
 El sistema de tests de este parcial **sólo correrá los tests que hayan marcado
 como hechos**. Para esto deben modificar la variable `EJERCICIO_xx_HECHO`
 correspondiente asignándole `true` (en C) ó `TRUE` (en ASM). `xx` es el inciso
-en cuestión: `1A`, `1B`, `1C`, `2A`.
+en cuestión: `1A`, `1B`, `1C`.
 
 # Ejercicio 1
 

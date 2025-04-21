@@ -4,7 +4,7 @@ LDFLAGS = -lm
 CFLAGS= -Wall -Wextra -pedantic -O0 -g -Wno-unused-variable -Wno-unused-parameter -no-pie -z noexecstack -I ../../test_utils/
 VPATH=.:../../test_utils
 STRUCTS_FILE=ej1.h
-STRUCTS_PATH="../p1/ej1"
+STRUCTS_PATH="../2c2024-p1/ej1"
 # Crea los binarios en cuestión
 all: test_c test_asm test_abi
 
