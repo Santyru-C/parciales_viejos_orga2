@@ -30,6 +30,13 @@ EJERCICIO_1B_HECHO: db FALSE ; Cambiar por `TRUE` para correr los tests.
 global EJERCICIO_1C_HECHO
 EJERCICIO_1C_HECHO: db FALSE ; Cambiar por `TRUE` para correr los tests.
 
+;########### ESTOS SON LOS OFFSETS Y TAMAÑO DE LOS STRUCTS
+; Completar las definiciones (serán revisadas por ABI enforcer):
+ATTACKUNIT_CLASE EQU ??
+ATTACKUNIT_COMBUSTIBLE EQU ??
+ATTACKUNIT_REFERENCES EQU ??
+ATTACKUNIT_SIZE EQU ??
+
 global optimizar
 optimizar:
 	; Te recomendamos llenar una tablita acá con cada parámetro y su

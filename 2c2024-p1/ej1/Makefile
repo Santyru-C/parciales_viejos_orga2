@@ -36,6 +36,7 @@ valgrind_abi: test_abi
 # Borra todos los archivos generados
 clean:
 	rm -f test_c test_asm test_abi test.o ej1_asm.o ej1_abi.o abi_enforcer_regsave.o
+	@cd ../../test_utils && $(MAKE) clean
 
 test_c: test.c ej1.c
 	$(CC) $(CFLAGS) $^ -o $@ $(LDFLAGS)

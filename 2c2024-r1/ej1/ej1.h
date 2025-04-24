@@ -11,10 +11,10 @@
  *   - references:     La cantidad de referencias a la unidad en el mapa.
  */
 typedef struct {
-	char clase[11];
-	uint16_t combustible;
-	uint8_t references;
-} attackunit_t;
+	char clase[11];       //asmdef_offset:ATTACKUNIT_CLASE
+	uint16_t combustible; //asmdef_offset:ATTACKUNIT_COMBUSTIBLE
+	uint8_t references;   //asmdef_offset:ATTACKUNIT_REFERENCES
+} attackunit_t; //asmdef_size:ATTACKUNIT_SIZE
 
 typedef attackunit_t *mapa_t[255][255];
 
