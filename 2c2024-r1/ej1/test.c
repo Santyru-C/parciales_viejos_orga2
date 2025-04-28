@@ -5,6 +5,7 @@
 #include <string.h>
 
 #include "ej1.h"
+#include "../test_utils/test-utils.h"
 
 /**
  * Cuenta cuántos tests corrieron exitosamente.
