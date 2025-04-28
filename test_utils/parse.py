@@ -10,9 +10,11 @@ def parse_defs(defs, lines):
         line = line.rstrip()
         if "asmdef_offset:" in line:
             asmdef = line.split('asmdef_offset:')[1]
+            asmdef = asmdef.split(' ')[0]
             yield i, asmdef
         if "asmdef_size:" in line:
             asmdef = line.split('asmdef_size:')[1]
+            asmdef = asmdef.split(' ')[0]
             yield i, asmdef
 
 class StructFieldVisitor(pycparser.c_ast.NodeVisitor):
