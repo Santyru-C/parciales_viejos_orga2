@@ -28,13 +28,10 @@ def diff():
     for c_decl, c_val in c_defs.items():
         if c_decl not in asm_defs:
             print(f"{bcolors.ANSI_COLOR_RED}error: [ABI_enforcer] falta definir {c_decl}{bcolors.ANSI_COLOR_RESET}")
-            errors.add(c_decl.split("_OFFSET")[0])
+            errors.add(c_decl)
             continue
         if c_val != asm_defs[c_decl]:
-            if "_OFFSET" in c_decl:
-                errors.add(c_decl.split("_OFFSET")[0])
-            elif "_SIZE" in c_decl:
-                errors.add(c_decl.split("_SIZE")[0])
+            errors.add(c_decl)
         
     if errors:
         print(f"{bcolors.ANSI_COLOR_RED}error: [ABI_enforcer] Hay offsets o tamaños erróneos{bcolors.ANSI_COLOR_RESET}")
